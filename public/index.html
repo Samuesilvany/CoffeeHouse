@@ -62,8 +62,44 @@
                 <button class="btn-page active">1</button>
                 <button class="btn-nav">Próximo</button>
             </section>
+            
+            <section id = "activity-list" class="activities"></section>
         </main>
     </div>
+
+<template id=" activity-card-template">
+    <article class="activity-card">
+        <div class="activity-header">
+            <h3 class="activity-title"></h3> 
+            <time class="activity-date"></time>
+        </div>
+        <div class="activity-body">
+            <img class="activity-avatar" alt="Foto do usuário"/>
+            <strong class="activity-user"></strong>
+            <div class="metrics">
+                <p><span class="distance"></span><small>Distância</small></p>
+                <span class="duration"> Duração ==></span>
+                <span class="co2">CO2 evitado ==></span>
+        </div>
+        </div>
+
+
+        <div class="actions">
+            <button class="like-btn">♡</button>
+            <span class="like-count">0</span>
+            <button class="comment-btn">💬</button>
+            <span class="comments-count"> 0</span>
+        </div>
+
+        <div class="comment-box hidden">
+
+            <input type="text" class="comment-input" placeholder="Escrever um comentário">
+            <button class="send-comment">Enviar</button>
+            <small class="error"></small>
+        </div>
+    </article>
+</template>
+
 
 </body>
 
