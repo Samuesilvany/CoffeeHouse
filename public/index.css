@@ -242,4 +242,71 @@ img {
 
 .comment-box button{
     padding: 10px 14px;
+};
+
+.pagination{
+    display: flex;
+    margin: 18px 0;
+    gap: 4px;
+};
+
+.pagination button{
+    border: 1px solid #777;
+    background: #ddd;
+    padding: 5px 9px;
+    cursor: pointer;
+};
+
+.pagination button.active{
+  color: #fff;
+};
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background-color: #fff;
+  width: 350px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #999;
+}
+
+.modal-head button {
+  border: none;
+  background: transparent;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.error {
+  color: var(--danger);
+  min-height: 16px;
+}
+
+.invalid {
+  border: 1px solid var(--danger) !important;
 }

@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoMove</title>
-   <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
 
     <div class="container">
-     
+
         <aside class="sidebar">
             <div class="profile-header">
                 <img src="./public/EcoMove.png" alt="Logo EcoMove" class="logo">
@@ -41,7 +41,7 @@
             </footer>
         </aside>
 
-    
+
         <main class="Content">
             <header class="main-header">
                 <button class="btn-login">Login</button>
@@ -54,7 +54,7 @@
             </section>
 
             <section id="activities-container">
-             
+
             </section>
 
             <section class="pagination">
@@ -62,43 +62,71 @@
                 <button class="btn-page active">1</button>
                 <button class="btn-nav">Próximo</button>
             </section>
-            
-            <section id = "activity-list" class="activities"></section>
+
+            <section id="activity-list" class="activities"></section>
+            <div id="pagination" class="pagination"></div>
         </main>
     </div>
 
-<template id=" activity-card-template">
-    <article class="activity-card">
-        <div class="activity-header">
-            <h3 class="activity-title"></h3> 
-            <time class="activity-date"></time>
-        </div>
-        <div class="activity-body">
-            <img class="activity-avatar" alt="Foto do usuário"/>
-            <strong class="activity-user"></strong>
-            <div class="metrics">
-                <p><span class="distance"></span><small>Distância</small></p>
-                <span class="duration"> Duração ==></span>
-                <span class="co2">CO2 evitado ==></span>
-        </div>
-        </div>
+    <template id=" activity-card-template">
+        <article class="activity-card">
+            <div class="activity-header">
+                <h3 class="activity-title"></h3>
+                <time class="activity-date"></time>
+            </div>
+            <div class="activity-body">
+                <img class="activity-avatar" alt="Foto do usuário" />
+                <strong class="activity-user"></strong>
+                <div class="metrics">
+                    <p><span class="distance"></span><small>Distância</small></p>
+                    <span class="duration"> Duração ==></span>
+                    <span class="co2">CO2 evitado ==></span>
+                </div>
+            </div>
 
 
-        <div class="actions">
-            <button class="like-btn">♡</button>
-            <span class="like-count">0</span>
-            <button class="comment-btn">💬</button>
-            <span class="comments-count"> 0</span>
+            <div class="actions">
+                <button class="like-btn">♡</button>
+                <span class="like-count">0</span>
+                <button class="comment-btn">💬</button>
+                <span class="comments-count"> 0</span>
+            </div>
+
+            <div class="comment-box hidden">
+
+                <input type="text" class="comment-input" placeholder="Escrever um comentário">
+                <button class="send-comment">Enviar</button>
+                <small class="error"></small>
+            </div>
+        </article>
+        <div id="login-modal" class="modal hidden">
+            <div class="modal-box">
+
+                <div class="modal-head">
+                    <h3>Login</h3>
+                    <button id="close-modal">✕</button>
+                </div>
+
+
+                <label for="login-email">Email</label>
+                <input id="login-email" type="email" />
+
+
+                <label for="login-password">Senha</label>
+                <input id="login-password" type="password" />
+
+                <small id="login-error" class="error"></small>
+
+                <div class="modal-actions">
+                    <button id="submit-login" class="btn-dark">Login</button>
+                    <button id="cancel-login">Cancelar</button>
+                </div>
+
+            </div>
         </div>
 
-        <div class="comment-box hidden">
-
-            <input type="text" class="comment-input" placeholder="Escrever um comentário">
-            <button class="send-comment">Enviar</button>
-            <small class="error"></small>
         </div>
-    </article>
-</template>
+    </template>
 
 
 </body>
